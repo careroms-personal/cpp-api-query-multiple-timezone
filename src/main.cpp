@@ -1,4 +1,5 @@
 #include "httplib.h"
+#include "call_timezone.h"
 #include <iostream>
 
 using namespace std;
@@ -14,6 +15,8 @@ int main() {
     res.set_content(R"({"status": "ok"})", "application/json");
     res.status = 200;
   });
+
+  register_timezone_routes(srv);
 
   std::cout << "Server starting up on http://localhost:" << global_var::port << std::endl;
   srv.listen("0.0.0.0", global_var::port);

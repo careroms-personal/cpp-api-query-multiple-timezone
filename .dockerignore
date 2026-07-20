@@ -1,0 +1,42 @@
+# Version control
+.git
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile*
+docker-compose*.yml
+
+# Local build output (rebuilt inside the image; host binary may be a
+# different OS/arch than the container)
+server
+build/
+Build/
+build-*/
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# CMake generated files (if introduced later)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Docs / misc not needed at runtime
+README*
+LICENSE
+*.md

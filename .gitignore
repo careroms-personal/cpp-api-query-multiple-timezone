@@ -38,6 +38,7 @@
 *.exe
 *.out
 *.app
+/server
 
 # Build directories
 build/
@@ -67,3 +68,11 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS cruft
+.DS_Store
+Thumbs.db
